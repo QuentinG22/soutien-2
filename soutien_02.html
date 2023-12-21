@@ -98,6 +98,18 @@
 
         // Step 4: Afficher le résultat en utilisant la fonction displayResult 
 
+        function go(){
+            let number = document.getElementById('number').value;
+            if(isNaN(number)){
+                alert(`${number} n'est pas un nombre`);
+            } else if(number < 5 || number > 15){
+                alert(`Veuillez saisir un nombre entre 5 et 15`);
+            } else{
+                resultNumber = Math.pow(number, 3);
+                message = `Voici votre nombre au cube`
+                displayResult(message, resultNumber)
+            }
+        }
     </script>
 </body>
 
