@@ -77,6 +77,38 @@
 
         // Your code here...
 
+        /*
+         * La fonction à pour rôle d'effectuer une vérification si le nombre est pair ou impair
+         * ensuite elle fait le calcul correspondant et de le retourner
+         * Paramètre: récupère une valeur pour effectuer la vérification et faire le calcul
+         * Return: Retourne le résultat
+         */
+        function cube(a){
+            if(a % 2 == 0){
+                resultNumber = Math.pow(a, 3)
+            } else{
+                resultNumber = Math.pow(a, 2)
+            }
+            return resultNumber
+        }
+
+        /* 
+         * La function récupère la valeur de l'input qui a pour id 'number'
+         * il y a un system de vérification si ses bien un nombre et si ses entre 5 et 15
+         * pour afficher le résultat on fait appel à une fonction qui a 2 parametre
+         * Un paramètre pour le message et le second pour avoir le résultat du calcul avec le nombre donner par l'input
+         */
+        function go(){
+            let number = document.getElementById('number').value;
+            if(isNaN(number)){
+                alert(`${number} n'est pas un nombre`)
+            } else if(number < 5 || number > 15){
+                alert(`Veuillez saisir un nombre entre 5 et 15`)
+            } else{
+                message = `Voici le résultat du calcul`;
+                displayResult(message, cube(number));
+            }
+        }
     </script>
 </body>
 
