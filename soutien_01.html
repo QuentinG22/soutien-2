@@ -85,6 +85,36 @@
     <script type="text/javascript">
 
         // Your code here...
+        function hello(a, b){
+            return (2 * a) - b;
+        }
+
+        function hi(a){
+            return (a * a) % 3
+        }
+
+        // Question 1: a et b sont des paramètres attendu pour le calcul de la function
+
+        // Question 2: Quand on ecrit resultOne = hello (2, 3); on appele la function avec les parametres 2 et 3
+        // le résultat de resultOne sera donc: 1
+
+        // Question 3: La function a demande un parametre qui ensuite retourne le parametre multiplier par lui même
+        // qui ensuite donne le reste de la division
+
+        // Question 4: ResultTwo vaut: 1 équivaut au reste de la division part 3
+
+        // Quesiton 5 ResultThree vaut: 1 le détail: hi(-2) -> 2 chiffre négative multiplier équivaut a 2 chiffre positif
+
+        // Question 6: resultFour vaut: 4 le détail: hello(resultTwo, -2) -> hello(1, -2) -> 4
+
+        resultOne = hello(2, 3);
+        console.log(resultOne)
+        resultTwo = hi(4);
+        console.log(resultTwo)
+        resultThree = hi (hello(1, 4));
+        console.log(resultThree)
+        resultFour = hello(resultTwo, hello(1, 4));
+        console.log(resultFour)
 
     </script>
 </body>
