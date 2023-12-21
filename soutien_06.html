@@ -18,10 +18,12 @@
         <ul>
             <li>faire les points dans l'ordre et ne passer au point suivant que lorsque le précédent est achevé
                 et testé,</li>
-            <li>utiliser la console autant que nécessaire Pour bien observer le contenu et le type des différentes variables,</li>
+            <li>utiliser la console autant que nécessaire Pour bien observer le contenu et le type des différentes
+                variables,</li>
             <li>écrire du code structuré et correctement indenté,</li>
             <li>écrire du code <strong>largement documenté !</strong></li>
-            <li>l'ajout du code JavaScript est fait entre les balises &lt;script&gt;...&lt;script&gt; de ce fichiet html</li>
+            <li>l'ajout du code JavaScript est fait entre les balises &lt;script&gt;...&lt;script&gt; de ce fichiet html
+            </li>
         </ul>
         <p>Eléments de départ fournis quel que soit l'exercice :</p>
         <ul>
@@ -35,15 +37,18 @@
                     <li>une fonction de génération d'une série aléatoire de nombres entiers rangés dans un tableau de
                         type Array,</li>
                 </ul>
-                L'utilisation de ces outils n'est pas systématiquement nécessaire (cela dépend des exercices). Par contre, 
+                L'utilisation de ces outils n'est pas systématiquement nécessaire (cela dépend des exercices). Par
+                contre,
                 <span class="text-danger">vous n'avez, en aucun cas, besoin</span> :
                 <ul>
                     <li><span class="text-danger">de modifier le code</span> de ces outils,</li>
-                    <li><span class="text-danger">de copier le code</span> des fonctions contenues dans <em>tools.js</em> dans 
+                    <li><span class="text-danger">de copier le code</span> des fonctions contenues dans
+                        <em>tools.js</em> dans
                         votre propre code.<br>
-                        Si vous utilisez les fonctions outils, vous ne pouvez que les "appeler".</li>
+                        Si vous utilisez les fonctions outils, vous ne pouvez que les "appeler".
+                    </li>
                 </ul>
-                
+
             </li>
         </ul>
         <h5 class="text-success text-center">Que la force soit avec vous !</h5>
@@ -52,35 +57,40 @@
     <!-- subject -->
     <div class="card subject">
         <p class="h6 font-weight-bold text-center">Soutien-2 #06 - Synthèse</p>
-        <p>En s'inspirant de la réflexion et du code mis en oeuvre lors des 4 exercices précédents (Soutien-2 #02 à #05) 
+        <p>En s'inspirant de la réflexion et du code mis en oeuvre lors des 4 exercices précédents (Soutien-2 #02 à #05)
             réaliser les points suivants :
-            <ol>
-                <li>Récupérer la fonction <code>cube</code> depuis l'exercice Soutien-2 #05. Elle sera utilisée telle 
-                    que ; inutile de la modifier.</li>
-                <li>Écrire une fonction <code>generateSrcData</code> qui construit un tableau de valeurs aléatoires.<br>
-                    Cette fonction est appelée par appui sur le bouton "Generate".<br>
-                    Pour construire le tableau, <code>generateSrcData</code> utilise la fonction <code>randomArrayOfIntFromInterval</code> mise à 
-                    disposition dans <em>tools.js</em>.<br>
-                    Les paramètres de construction du tableau sont acquis à travers le formulaire d'entrée:
-                    <ul>
-                        <li>nombre d'éléments de la série</li>
-                        <li>valeur minimum de la série générée</li>
-                        <li>valeur maximum de la série générée</li>
-                    </ul>
-                    Le tableau généré par <code>generateSrcData</code> est stocké dans une variable 
-                    qui devra être partagée avec les autres fonctions du code.</li>
-                <li>Écrire la fonction <code>go</code> qui s'exécute lors de l'appui sur le bouton "Go !".<br>
-                    Cette fonction exploite le tableau des valeurs "sources" 
-                    qui auront été générées auparavant (par l'appui sur le bouton "Generate").<br>
-                    Cette fonction a pour tâche de construire un nouveau tableau qui contient la transformation du tableau "source" 
-                    par la fonction <code>cube</code>. C'est à dire que le tableau "résultat" ainsi construit contient les données 
-                    du tableau "source", une à une transformées par la fonction <code>cube</code>.<br>
-                    <br>
-                    Le tableau "résultat" sera restitué à l'utilisateur en utilisant la fonction fournie <code>displayArray</code>.
-                </li>
-            </ol>
+        <ol>
+            <li>Récupérer la fonction <code>cube</code> depuis l'exercice Soutien-2 #05. Elle sera utilisée telle
+                que ; inutile de la modifier.</li>
+            <li>Écrire une fonction <code>generateSrcData</code> qui construit un tableau de valeurs aléatoires.<br>
+                Cette fonction est appelée par appui sur le bouton "Generate".<br>
+                Pour construire le tableau, <code>generateSrcData</code> utilise la fonction
+                <code>randomArrayOfIntFromInterval</code> mise à
+                disposition dans <em>tools.js</em>.<br>
+                Les paramètres de construction du tableau sont acquis à travers le formulaire d'entrée:
+                <ul>
+                    <li>nombre d'éléments de la série</li>
+                    <li>valeur minimum de la série générée</li>
+                    <li>valeur maximum de la série générée</li>
+                </ul>
+                Le tableau généré par <code>generateSrcData</code> est stocké dans une variable
+                qui devra être partagée avec les autres fonctions du code.
+            </li>
+            <li>Écrire la fonction <code>go</code> qui s'exécute lors de l'appui sur le bouton "Go !".<br>
+                Cette fonction exploite le tableau des valeurs "sources"
+                qui auront été générées auparavant (par l'appui sur le bouton "Generate").<br>
+                Cette fonction a pour tâche de construire un nouveau tableau qui contient la transformation du tableau
+                "source"
+                par la fonction <code>cube</code>. C'est à dire que le tableau "résultat" ainsi construit contient les
+                données
+                du tableau "source", une à une transformées par la fonction <code>cube</code>.<br>
+                <br>
+                Le tableau "résultat" sera restitué à l'utilisateur en utilisant la fonction fournie
+                <code>displayArray</code>.
+            </li>
+        </ol>
         </p>
-        
+
     </div>
 
     <!-- html input wrapper -->
@@ -103,6 +113,52 @@
     <script type="text/javascript">
 
         // Your code here...
+
+        let table;
+
+        /*
+         * La fonction à pour rôle d'effectuer une vérification si le nombre est pair ou impair
+         * ensuite elle fait le calcul correspondant et de le retourner
+         * Paramètre: récupère une valeur pour effectuer la vérification et faire le calcul
+         * Return: Retourne le résultat
+         */
+        function cube(a) {
+            if (a % 2 == 0) {
+                resultNumber = Math.pow(a, 3);
+            } else {
+                resultNumber = Math.pow(a, 2);
+            }
+            return resultNumber;
+        }
+
+        /*
+         * La fonction à pour rôle de récupérer des valeurs pour créer un tableau avec des nombre aléatoires
+         * mais avant de le créer il y a une vérification que les valeur saisis sont bien des nombres
+         */
+        function generateSrcData() {
+            let numberElement = document.getElementById('number').value;
+            let minNumber = document.getElementById('borne-inf').value;
+            console.log(minNumber)
+            let maxNumber = document.getElementById('borne-sup').value;
+            if (isNaN(numberElement) || isNaN(minNumber) || isNaN(maxNumber)) {
+                alert('Veuillez saisir un nombre valide');
+            } else {
+                table = (randomArrayOfIntFromInterval(numberElement, minNumber, maxNumber));
+            }
+        }
+
+        /*
+         * La fonction à pour rôle de récupérer les nombres dans le tableau table qui a été saisis par la fonction
+         * generateSrcData() et elle envoie chaque nombre a la fonction cube() pour que celle la fait le calcul
+         * et après avoir reçu le retour de la fontion cube() le résultat est ranger dans un tableau pour enssuite les afficher
+         */
+        function go(){
+            let resultTable = [];
+            for(let i = 0; i < table.length; i++){
+                resultTable.push(cube(table[i]));
+            }
+            displayArray (resultTable);
+        }
 
     </script>
 </body>
